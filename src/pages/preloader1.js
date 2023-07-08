@@ -36,7 +36,7 @@ const Preloader1 = () => {
       )}
 
       <CountUp
-        className="absolute right-3 bottom-3 text-[36px] font-extrabold"
+        className="absolute right-3 bottom-7 text-[36px] font-extrabold"
         start={0}
         end={100}
         duration={5}
