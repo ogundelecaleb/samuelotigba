@@ -8,7 +8,7 @@ const Preloader1 = () => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   return (
-    <div className="h-screen relative">
+    <div className="h-[100vh] relative">
       {open ? (
         <div className="text-center flex flex-col justify-center  w-full h-full">
           <m.div
@@ -36,7 +36,7 @@ const Preloader1 = () => {
       )}
 
       <CountUp
-        className="absolute right-3 bottom-7 text-[36px] font-extrabold"
+        className="absolute right-3 bottom-9 text-[36px] font-extrabold"
         start={0}
         end={100}
         duration={5}
