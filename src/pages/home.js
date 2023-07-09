@@ -24,7 +24,7 @@ const Home = () => {
           </button>
         </div>
 
-        <div className="mt-[80%] md:mt-[325px] md:w-[50%] lg:w-[40%]">
+        <div className="mt-[100%] md:mt-[325px] md:w-[50%] lg:w-[40%]">
           <p className="text-white md:text-[24px]  ">
             Hi! 👋 <br/>I am Samuel Otigba, a daily Product Growth and Marketing
             Specialist and also a Product/ Industrial designer every other
