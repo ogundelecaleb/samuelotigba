@@ -34,7 +34,7 @@ const Preloader1 = () => {
             <h2 className="text-xl font-extrabold ">Otigba.</h2>
             <p className="tracking-wider">I am a Superconnector.</p>
             <p>I connect over good food and sweet red wine.</p>
-            <button onClick={()=> navigate("/home")} className="animate-bounce flex justify-center text-[28px] cursor-pointer font-extrabold mx-auto"> click me! <BsHeartArrow /></button>
+            <button onClick={()=> navigate("/home")} className="animate-bounce flex justify-center text-[28px] cursor-pointer font-extrabold mx-auto">  <BsHeartArrow /></button>
           
           </m.div>{" "}
         </div>
