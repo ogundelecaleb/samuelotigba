@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState } from "react";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import Marquee from "react-fast-marquee";
@@ -76,7 +77,7 @@ const Home = () => {
             <p> I am a sophisticated lover of all things beautiful. </p>
           </li>
           <li className="tracking-wide">
-            I enjoy cooking. Oh hey! Check out <a href="" className="underline">Blvck Apron</a> 
+            I enjoy cooking. Oh hey! Check out <a href="www.google.com" target= "blank"  className="underline">Blvck Apron</a> 
           </li>
           <li className="tracking-wide">
             I constantly challenge myself to create unique and engaging
@@ -116,9 +117,12 @@ const Home = () => {
           </p>
         </div>
       </section>
+      // eslint-disable-next-line
       <section className="pt-[40px] md:pt-[104px] px-[16px] md:px-[48px] text-white bg-[#111111] ">
         <div className="mb-[24px] md:mb-[80px]">
+        // eslint-disable-next-line
           <h2 className="text-[40px] md:text-[70px] font-bold ">
+          
             //Selected Works
           </h2>
         </div>
