@@ -117,10 +117,10 @@ const Home = () => {
           </p>
         </div>
       </section>
-      // eslint-disable-next-line
+     
       <section className="pt-[40px] md:pt-[104px] px-[16px] md:px-[48px] text-white bg-[#111111] ">
         <div className="mb-[24px] md:mb-[80px]">
-        // eslint-disable-next-line
+     
           <h2 className="text-[40px] md:text-[70px] font-bold ">
           
             //Selected Works
