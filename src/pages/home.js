@@ -127,7 +127,7 @@ const Home = () => {
           </h2>
         </div>
 
-        <div className=" border-t pt-[24px] pb-[28px]  md:pt-[90px] md:pb-[110px]flex justify-between items-center">
+        <div className=" border-t pt-[24px] pb-[28px]  md:pt-[90px] md:pb-[110px] flex justify-between items-center">
           <div className="text-[#BABABA] flex flex-col ">
             <h2 className="md:text-[64px] text-[24px]">AFRILEISURE COLLECTION</h2>{" "}
             <button className="px-2 py-2 border rounded-lg border-white max-w-[120px]">
