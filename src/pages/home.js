@@ -20,17 +20,43 @@ const Home = () => {
   const [more4, setMore4] = useState(false);
   const [more5, setMore5] = useState(false);
 
-  const bottomEl = useRef(null);
+  const bottomEl = useRef();
   const topEl = useRef(null);
 
-  const scrollToBottom = (e) => {
-    e.preventDefault();
-    bottomEl?.current?.scrollIntoView({ block: "nearest", behavior: "smooth" });
+  const scrollingTop = (event) => {
+    const elmnt = topEl;
+    elmnt.current.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "start",
+    });
+  };
+
+  const scrollingBottom = (event) => {
+    const elmnt = bottomEl;
+    elmnt.current.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "start",
+    });
+  };
+
+  const scrollToBottom = () => {
+    setImmediate(() => bottomEl?.current.scrollIntoView({ inline: "center" }));
+    // setTimeout(() =>bottomEl?.current?.scrollIntoView({ inline: "center"}), 0);
   };
 
   const scrollToTop = (e) => {
     e.preventDefault();
     topEl?.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollTo = (ref) => {
+    setTimeout(
+      () =>
+        ref.current.scrollIntoView({ inline: "center", behavior: "smooth" }),
+      777
+    );
   };
 
   // const handleRotate1 () {
@@ -41,6 +67,7 @@ const Home = () => {
     <div>
       <section
         id="hero"
+        ref={topEl}
         className="bgImage relative  h-[900px] bg-no-repeat bg-cover sm:bg-center py-[24px] px-[16px]  md:py-[32px] md:px-[48px]"
       >
         <div className="w-full h-full top-0 left-0 absolute bg-[#000000] bg-opacity-[33%] z-10"></div>
@@ -71,8 +98,8 @@ const Home = () => {
         </div>
 
         <button
-          onClick={scrollToBottom}
-          className="text-white absolute font-bold cursor-pointer flex gap-1 items-center bottom-[24px] left-[16px]  md:bottom-[32px] md:left-[48px]"
+          onClick={scrollingBottom}
+          className="text-white absolute font-bold cursor-pointer flex gap-1 items-center bottom-[24px] z-20 left-[16px]  md:bottom-[32px] md:left-[48px]"
         >
           <p>scroll down</p> <AiOutlineArrowDown className="animate-bounce " />
         </button>
@@ -645,7 +672,10 @@ const Home = () => {
           REACH ME
         </button>
       </section>
-      <section className="pt-[40px] md:pt-[104px] px-[16px] md:px-[48px] text-white bg-[#111111] ">
+      <section
+        ref={bottomEl}
+        className="pt-[40px] md:pt-[104px] px-[16px] md:px-[48px] text-white bg-[#111111] "
+      >
         <div className="px-[24px] py-[16px] bg-[#fff] bg-opacity-[80%] ">
           <p className="mb-[40px] text-black">
             Bonus stuff: This portfolio website was purely designed for the
@@ -658,18 +688,14 @@ const Home = () => {
         </div>
       </section>
       <section className="pt-[40px] pb-4 md:pt-[104px] px-[16px] md:px-[48px] text-white bg-[#111111] ">
-        <div
-          ref={bottomEl}
-          className="flex items-center justify-between mb-[24px] text-[#ffffff]"
-        >
+        <div className="flex items-center justify-between mb-[24px] text-[#ffffff]">
           <p className="text-[14px] tracking-wide font-light">
             © 2023 All Rights Reserved.
           </p>
-          <a href="#hero">
-            <button className="flex items-center gap-2">
-              BACK TO TOP <AiOutlineArrowUp className="animate-bounce " />
-            </button>
-          </a>
+
+          <button onClick={scrollingTop} className="flex items-center gap-2">
+            BACK TO TOP <AiOutlineArrowUp className="animate-bounce " />
+          </button>
         </div>
         <div className="px-2">
           <p className="text-[#ffffff] text-center text-[12px] tracking-wide font-light">
