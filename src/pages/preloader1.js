@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CountUp from "react-countup";
 import { useNavigate } from "react-router-dom";
 import { motion as m } from "framer-motion";
-import {BsHeartArrow} from "react-icons/bs"
+import { BsHeartArrow } from "react-icons/bs";
 
 const Preloader1 = () => {
   const navigate = useNavigate();
@@ -13,11 +13,11 @@ const Preloader1 = () => {
         <div className="text-center flex flex-col justify-center  w-full h-full">
           <m.div
             initial={{ scale: 0 }}
-            animate={{  scale: 1 }}
+            animate={{ scale: 1 }}
             transition={{
               type: "spring",
               stiffness: 260,
-              damping: 20
+              damping: 20,duration: 1.3
             }}
             // initial={{ y: -500, opacity: 0, scale: 0.5 }}
             // animate={{
@@ -34,8 +34,19 @@ const Preloader1 = () => {
             <h2 className="text-xl font-extrabold ">Otigba.</h2>
             <p className="tracking-wider">I am a Superconnector.</p>
             <p>I connect over good food and sweet red wine.</p>
-            <button onClick={()=> navigate("/home")} className="animate-bounce flex justify-center text-[28px] cursor-pointer font-extrabold mx-auto">  <BsHeartArrow /></button>
-          
+            <m.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ ease: "easeOut", duration: 1.7 }}
+            >
+              <button
+                onClick={() => navigate("/home")}
+                className="animate-bounce mt-7 flex justify-center gap-2 items-center text-[18px] cursor-pointer font-extrabold mx-auto"
+              >
+                {" "}
+                Click me to proceed <BsHeartArrow />
+              </button>
+            </m.div>{" "}
           </m.div>{" "}
         </div>
       ) : (
