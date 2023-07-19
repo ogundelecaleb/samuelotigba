@@ -107,7 +107,7 @@ const Home = () => {
       <section className="pt-[40px] md:pt-[104px] px-[16px] md:px-[48px] text-white bg-[#111111] ">
         <h3 className="text-[40px] md:text-[70px] font-extrabold">//About</h3>
 
-        <ul className="flex justify-center flex-col  md:max-w-[80%]  text-[18px] md:text-[30px] lg:text-[48px] mx-auto">
+        <ul className="flex justify-center flex-col  md:max-w-[90%] lg:max-w-[80%]  text-[18px] md:text-[28px] lg:text-[48px] mx-auto">
           <li className="flex items-center tracking-wide ">
             {" "}
             I &nbsp;
@@ -205,7 +205,7 @@ const Home = () => {
                 onClick={() => {
                   setExpand1(!expand1);
                 }}
-                className="px-2 py-1 border rounded-[40px] border-white max-w-[100px] md:max-w-[120px]"
+                className="px-2 py-1 border rounded-[40px] border-white max-w-[100px] md:max-w-[120px] transition-all duration-700 bg-gradient-to-br to-white via-black from-[#111111] bg-size-200 hover:bg-right-bottom"
               >
                 {expand1 === true ? "Collapse" : "Expand"}
               </button>
@@ -216,18 +216,19 @@ const Home = () => {
             </div>
           </div>
           {expand1 === true ? (
-            <div className="flex flex-col text-[#BABABA] justify-between md:flex-row pt-5">
+            <m.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 260,
+                damping: 20,
+                duration: 1.3,
+              }}
+            >
               {" "}
-              <m.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 260,
-                  damping: 20,
-                  duration: 1.3,
-                }}
-              >
+              <div className="flex flex-col text-[#BABABA] justify-between md:flex-row pt-5">
+                {" "}
                 <div className="w-full md:w-[50%]">
                   <h3 className="mt-2">ABOUT</h3>{" "}
                   <p className="text-sm">
@@ -245,7 +246,6 @@ const Home = () => {
                     and contemporary fashion.
                   </p>
                 </div>
-
                 <div>
                   <h3 className="mt-2">INDUSTRY</h3>
                   <p className="text-sm"> Sports and Athleisure</p>
@@ -257,8 +257,8 @@ const Home = () => {
                   <h3 className="mt-2">PRODUCT DESCRIPTION</h3>
                   <p className="text-sm"> African, Bold, Daring, Futuristic</p>
                 </div>
-              </m.div>
-            </div>
+              </div>
+            </m.div>
           ) : (
             ""
           )}
@@ -271,7 +271,7 @@ const Home = () => {
                 onClick={() => {
                   setExpand2(!expand2);
                 }}
-                className="px-2 py-1 border rounded-[40px] border-white max-w-[100px] md:max-w-[120px]"
+                className="px-2 py-1 border rounded-[40px] border-white max-w-[100px] md:max-w-[120px] transition-all duration-700 bg-gradient-to-br to-white via-black from-[#111111] bg-size-200 hover:bg-right-bottom"
               >
                 {expand2 === true ? "Collapse" : "Expand"}
               </button>
@@ -282,6 +282,16 @@ const Home = () => {
             </div>
           </div>
           {expand2 === true ? (
+            <m.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 260,
+              damping: 20,
+              duration: 1.3,
+            }}
+          >
             <div className="flex flex-col text-[#BABABA] justify-between md:flex-row pt-5">
               <div className="w-full md:w-[50%]">
                 <h3 className="mt-2">ABOUT</h3>{" "}
@@ -306,7 +316,7 @@ const Home = () => {
                 <h3 className="mt-2">PRODUCT DESCRIPTION</h3>
                 <p className="text-sm"> African, Bold, Daring, Futuristic</p>
               </div>
-            </div>
+            </div></m.div>
           ) : (
             ""
           )}
@@ -321,7 +331,7 @@ const Home = () => {
                 onClick={() => {
                   setExpand3(!expand3);
                 }}
-                className="px-2 py-1 border rounded-[40px] border-white max-w-[100px] md:max-w-[120px]"
+                className="px-2 py-1 border rounded-[40px] border-white max-w-[100px] md:max-w-[120px] transition-all duration-700 bg-gradient-to-br to-white via-black from-[#111111] bg-size-200 hover:bg-right-bottom"
               >
                 {expand3 === true ? "Collapse" : "Expand"}
               </button>
@@ -332,6 +342,16 @@ const Home = () => {
             </div>
           </div>
           {expand3 === true ? (
+            <m.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 260,
+              damping: 20,
+              duration: 1.3,
+            }}
+          >
             <div className="flex flex-col text-[#BABABA] justify-between md:flex-row pt-5">
               <div className="w-full md:w-[50%]">
                 <h3 className="mt-2">ABOUT</h3>{" "}
@@ -358,7 +378,7 @@ const Home = () => {
                 <h3 className="mt-2">PRODUCT DESCRIPTION</h3>
                 <p className="text-sm">African, Bold, Daring, Futuristic</p>
               </div>
-            </div>
+            </div></m.div>
           ) : (
             ""
           )}
@@ -373,7 +393,7 @@ const Home = () => {
                 onClick={() => {
                   setExpand4(!expand4);
                 }}
-                className="px-2 py-1 border rounded-[40px] border-white max-w-[100px] md:max-w-[120px]"
+                className="px-2 py-1 border rounded-[40px] border-white max-w-[100px] md:max-w-[120px] transition-all duration-700 bg-gradient-to-br to-white via-black from-[#111111] bg-size-200 hover:bg-right-bottom"
               >
                 {expand4 === true ? "Collapse" : "Expand"}
               </button>
@@ -386,6 +406,16 @@ const Home = () => {
           </div>
 
           {expand4 === true ? (
+            <m.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 260,
+              damping: 20,
+              duration: 1.3,
+            }}
+          >
             <div className="flex flex-col text-[#BABABA] justify-between md:flex-row pt-5">
               <div className="w-full md:w-[50%]">
                 <h3 className="mt-2">ABOUT</h3>{" "}
@@ -410,7 +440,7 @@ const Home = () => {
                 <h3 className="mt-2">PRODUCT DESCRIPTION</h3>
                 <p className="text-sm"> Cool and Artsy</p>
               </div>
-            </div>
+            </div></m.div>
           ) : (
             ""
           )}
@@ -423,7 +453,7 @@ const Home = () => {
                 onClick={() => {
                   setExpand5(!expand5);
                 }}
-                className="px-2 py-1 border rounded-[40px] border-white max-w-[100px] md:max-w-[120px]"
+                className="px-2 py-1 border rounded-[40px] border-white max-w-[100px] md:max-w-[120px] transition-all duration-700 bg-gradient-to-br to-white via-black from-[#111111] bg-size-200 hover:bg-right-bottom"
               >
                 {expand5 === true ? "Collapse" : "Expand"}
               </button>
@@ -436,6 +466,16 @@ const Home = () => {
           </div>
 
           {expand5 === true ? (
+            <m.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 260,
+              damping: 20,
+              duration: 1.3,
+            }}
+          >
             <div className="flex flex-col text-[#BABABA] justify-between md:flex-row pt-5">
               <div className="w-full md:w-[50%]">
                 <h3 className="mt-2">ABOUT</h3>{" "}
@@ -469,7 +509,7 @@ const Home = () => {
                   Washing machine friendly, wash and wear.
                 </p>
               </div>
-            </div>
+            </div></m.div>
           ) : (
             ""
           )}
@@ -484,7 +524,7 @@ const Home = () => {
                 onClick={() => {
                   setExpand6(!expand6);
                 }}
-                className="px-2 py-1 border rounded-[40px] border-white max-w-[100px] md:max-w-[120px]"
+                className="px-2 py-1 border rounded-[40px] border-white max-w-[100px] md:max-w-[120px] transition-all duration-700 bg-gradient-to-br to-white via-black from-[#111111] bg-size-200 hover:bg-right-bottom"
               >
                 {expand6 === true ? "Collapse" : "Expand"}
               </button>
@@ -497,6 +537,16 @@ const Home = () => {
           </div>
 
           {expand6 === true ? (
+            <m.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 260,
+              damping: 20,
+              duration: 1.3,
+            }}
+          >
             <div className="flex flex-col text-[#BABABA] justify-between md:flex-row pt-5">
               <div className="w-full md:w-[50%]">
                 <h3 className="mt-2">ABOUT</h3>{" "}
@@ -523,7 +573,7 @@ const Home = () => {
                   sleeps, Lagos.
                 </p>
               </div>
-            </div>
+            </div></m.div>
           ) : (
             ""
           )}
@@ -558,7 +608,7 @@ const Home = () => {
                 <p className="md:text-[20px] text-[14px]">Jan ‘23 - Present</p>
               </div>
               <div>
-                <button className="border border-white py-2 px-3 rounded-[40px] max-w-[120px] text-[12px] md:text-[18px] tracking-wide">
+                <button className="border border-white py-2 px-3 rounded-[40px] max-w-[120px] text-[12px] md:text-[18px] tracking-wide transition-all duration-700 bg-gradient-to-br to-white via-black from-[#111111] bg-size-200 hover:bg-right-bottom">
                   MORE
                 </button>
               </div>{" "}
@@ -574,7 +624,7 @@ const Home = () => {
                 <p className="text-[20px]">May ‘23 - Nov '22</p>
               </div>
               <div>
-                <button className="border border-white py-2 px-3 rounded-[40px] max-w-[120px] text-[12px] md:text-[18px] tracking-wide">
+                <button className="border border-white py-2 px-3 rounded-[40px] max-w-[120px] text-[12px] md:text-[18px] tracking-wide transition-all duration-700 bg-gradient-to-br to-white via-black from-[#111111] bg-size-200 hover:bg-right-bottom">
                   MORE
                 </button>
               </div>{" "}
@@ -589,7 +639,7 @@ const Home = () => {
                 <p className="text-[20px]">Since March 2021</p>
               </div>
               <div>
-                <button className="border border-white py-2 px-3 rounded-[40px] max-w-[120px] text-[12px] md:text-[18px] tracking-wide">
+                <button className="border border-white py-2 px-3 rounded-[40px] max-w-[120px] text-[12px] md:text-[18px] tracking-wide transition-all duration-700 bg-gradient-to-br to-white via-black from-[#111111] bg-size-200 hover:bg-right-bottom">
                   MORE
                 </button>
               </div>{" "}
@@ -604,7 +654,7 @@ const Home = () => {
                 <p className="text-[20px]">Oct '19 - Jan '21</p>
               </div>
               <div>
-                <button className="border border-white py-2 px-3 rounded-[40px] max-w-[120px] text-[12px] md:text-[18px] tracking-wide">
+                <button className="border border-white py-2 px-3 rounded-[40px] max-w-[120px] text-[12px] md:text-[18px] tracking-wide transition-all duration-700 bg-gradient-to-br to-white via-black from-[#111111] bg-size-200 hover:bg-right-bottom">
                   MORE
                 </button>
               </div>{" "}
@@ -619,12 +669,12 @@ const Home = () => {
                 <p className="text-[20px]">Nov '19 - Jan '20</p>
               </div>
               <div>
-                <button className="border border-white py-2 px-3 rounded-[40px] max-w-[120px] text-[12px] md:text-[18px] tracking-wide">
+                <button className="border border-white py-2 px-3 rounded-[40px] max-w-[120px] text-[12px] md:text-[18px] tracking-wide transition-all duration-700 bg-gradient-to-br to-white via-black from-[#111111] bg-size-200 hover:bg-right-bottom">
                   MORE
                 </button>
               </div>{" "}
             </div>
-            <button className="px-3 py-2 text-center text-[12px] md:text-[18px] border rounded-[40px] border-white max-w-[150px] mt-[32px]">
+            <button className="px-3 py-2 text-center text-[12px] md:text-[18px] border rounded-[40px] border-white max-w-[150px] mt-[32px] transition-all duration-700 bg-gradient-to-br to-white via-black from-[#111111] bg-size-200 hover:bg-right-bottom">
               VIEW RESUME
             </button>
           </div>
@@ -668,7 +718,7 @@ const Home = () => {
         <h2 className="text-[40px] text-white font-bold">
           Let’s talk about a project, collaboration or an idea you may have 😉
         </h2>
-        <button className="px-3 py-2 text-center text-[12px] md:text-[18px] border rounded-[40px] border-white max-w-[150px] mt-[32px]">
+        <button className="px-3 py-2 text-center text-[12px] md:text-[18px] border rounded-[40px] border-white max-w-[150px] mt-[32px] transition-all duration-700 bg-gradient-to-br to-white via-black from-[#111111] bg-size-200 hover:bg-right-bottom">
           REACH ME
         </button>
       </section>
