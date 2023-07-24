@@ -91,7 +91,7 @@ const Home = () => {
             </div>
 
             <div className="hidden md:block">
-              <p className="text-white">{currTime}</p>
+              <p className="text-white">{currTime}-WAT</p>
             </div>
 
             <button className="px-3 py-2 z-20 rounded-xl border-white border text-[14px] text-white transition-all duration-700 bg-gradient-to-br to-white via-black from-[#111111] bg-size-200 hover:bg-right-bottom">
@@ -622,7 +622,7 @@ const Home = () => {
                 {" "}
                 <div className="flex flex-col">
                   <p className="text-[18px] md:text-[24px]">BEZI</p>{" "}
-                  <p className=" italic text-[18px] md:text-[24px]">
+                  <p className=" italic text-[18px] md:text-[24px] max-w-[70%]">
                     Chief Growth Officer
                   </p>{" "}
                   <p className="md:text-[20px] text-[14px]">
@@ -679,9 +679,9 @@ const Home = () => {
             <div>
               <div className="flex flex-row justify-between mt-[32px]">
                 {" "}
-                <div className="flex flex-col">
+                <div className="flex flex-col max-w-[70%]">
                   <p className="text-[18px] md:text-[24px]">Sabee, NPE Meta</p>{" "}
-                  <p className=" italic text-[18px] md:text-[24px]">
+                  <p className=" italic text-[18px] md:text-[24px] ">
                     Product Marketing Manager (Contractual Worker)
                   </p>{" "}
                   <p className="text-[20px]">May ‘23 - Nov '22</p>
@@ -701,7 +701,7 @@ const Home = () => {
             <div>
               <div className="flex flex-row justify-between mt-[32px]">
                 {" "}
-                <div className="flex flex-col">
+                <div className="flex flex-col max-w-[70%]">
                   <p className="text-[18px] md:text-[24px]">AVANTEFLY</p>{" "}
                   <p className=" italic text-[18px] md:text-[24px]">
                     Chief Product Information Officer
@@ -719,7 +719,7 @@ const Home = () => {
                   </button>
                 </div>
               </div>
-              {more1 === true ? (
+              {more3 === true ? (
                 <m.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -758,7 +758,7 @@ const Home = () => {
             <div>
               <div className="flex flex-row justify-between mt-[32px]">
                 {" "}
-                <div className="flex flex-col">
+                <div className="flex flex-col max-w-[70%]">
                   <p className="text-[18px] md:text-[24px]">Smart Edge</p>{" "}
                   <p className=" italic text-[18px] md:text-[24px]">
                     Senior Partner (Client Development)/Business Consultant)
@@ -776,7 +776,7 @@ const Home = () => {
                   </button>
                 </div>{" "}
               </div>
-              {more1 === true ? (
+              {more4 === true ? (
                 <m.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -809,7 +809,7 @@ const Home = () => {
             <div>
               <div className="flex flex-row justify-between mt-[32px]">
                 {" "}
-                <div className="flex flex-col">
+                <div className="flex flex-col max-w-[70%]">
                   <p className="text-[18px] md:text-[24px]">CAX Africa</p>{" "}
                   <p className=" italic text-[18px] md:text-[24px]">
                     Head Digital Communications/Digital Marketing Consultant
@@ -827,7 +827,7 @@ const Home = () => {
                   </button>
                 </div>{" "}
               </div>
-              {more1 === true ? (
+              {more5 === true ? (
                 <m.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -859,7 +859,7 @@ const Home = () => {
             <div>
               <div className="flex flex-row justify-between mt-[32px]">
                 {" "}
-                <div className="flex flex-col">
+                <div className="flex flex-col max-w-[70%]">
                   <p className="text-[18px] md:text-[24px]">
                     UNITED NATIONS NGO: YOUTH CHARTER
                   </p>{" "}
@@ -871,15 +871,15 @@ const Home = () => {
                 <div>
                   <button
                     onClick={() => {
-                      setMore5(!more5);
+                      setMore6(!more6);
                     }}
                     className="border border-white py-2 px-3 rounded-[40px] max-w-[200px] text-[12px] md:text-[18px] tracking-wide transition-all duration-700 bg-gradient-to-br to-white via-black from-[#111111] bg-size-200 hover:bg-right-bottom"
                   >
-                    {more5 === true ? "VIEW LESS" : "VIEW MORE"}
+                    {more6 === true ? "VIEW LESS" : "VIEW MORE"}
                   </button>
                 </div>{" "}
               </div>
-              {more1 === true ? (
+              {more6 === true ? (
                 <m.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -958,9 +958,12 @@ const Home = () => {
         <h2 className="text-[40px] text-white font-bold">
           Let’s talk about a project, collaboration or an idea you may have 😉
         </h2>
-        <button onClick={() => {
-                  setContactBox(!contactbox);
-                }} className="px-3 py-2 text-center text-[12px] md:text-[18px] border rounded-[40px] border-white max-w-[150px] mt-[32px] transition-all duration-700 bg-gradient-to-br to-white via-black from-[#111111] bg-size-200 hover:bg-right-bottom">
+        <button
+          onClick={() => {
+            setContactBox(!contactbox);
+          }}
+          className="px-3 py-2 text-center text-[12px] md:text-[18px] border rounded-[40px] border-white max-w-[150px] mt-[32px] transition-all duration-700 bg-gradient-to-br to-white via-black from-[#111111] bg-size-200 hover:bg-right-bottom"
+        >
           REACH ME
         </button>
       </section>
@@ -995,52 +998,67 @@ const Home = () => {
           </p>
         </div>
       </section>
-      {contactbox   ?  <m.div
-                  initial={{ z: -500 }}
-                  animate={{ z: 1 }}
-                  transition={{
-                    type: "ease",
-                    
-                    delay:1.5,
-                    duration: 1.5,
-                  }}
-                 className="absolute bottom-0 w-full" >
+      {contactbox ? (
+        <m.div
+          initial={{ z: -500 }}
+          animate={{ z: 1 }}
+          transition={{
+            type: "ease",
 
-        <div className="pt-[40px] relative md:pt-[104px] px-[16px] md:px-[48px] text-[#000] bg-[#FFF] pb-[32px] ">
-        <button onClick={() => {
-                  setContactBox(!contactbox);
-                }}  className="absolute right-5 top-7">close</button>
-        <h2 className="text-[24px] md:text-[72px] font-bold">READY TO GET IN TOUCH</h2>
+            delay: 1.5,
+            duration: 1.5,
+          }}
+          className="absolute bottom-0 w-full"
+        >
+          <div className="pt-[40px] relative md:pt-[104px] px-[16px] md:px-[48px] text-[#000] bg-[#FFF] pb-[32px] ">
+            <button
+              onClick={() => {
+                setContactBox(!contactbox);
+              }}
+              className="absolute right-5 top-7"
+            >
+              close
+            </button>
+            <h2 className="text-[24px] md:text-[72px] font-bold">
+              READY TO GET IN TOUCH
+            </h2>
 
-        <form className="flex  w-full md:max-w-[70%] gap-5 mb-[70px] mt-5">
-          <div className="w-full">
-            <div className="flex flex-col mb-3 gap-2">
-              <label>Name</label>
-              <input className="w-full border py-2 px-3 rounded-lg" />
-            </div>
-            <div className="flex flex-col  gap-2">
-              <label>Subject</label>
-              <input className="w-full border py-2 px-3 rounded-lg" />
-            </div>
+            <form className="flex flex-col md:flex-row w-full md:max-w-[70%] gap-5 mb-[70px] mt-5">
+              <div className="w-full">
+                <div className="flex flex-col mb-3 gap-2">
+                  <label>Name</label>
+                  <input className="w-full border py-2 px-3 rounded-lg" />
+                </div>
+                <div className="flex flex-col  gap-2">
+                  <label>Subject</label>
+                  <input className="w-full border py-2 px-3 rounded-lg" />
+                </div>
+              </div>
+              <div className="w-full">
+                <div className="flex flex-col mb-3 gap-2">
+                  <label>Enter email address</label>
+                  <input className="w-full border py-2 px-3 rounded-lg" />
+                </div>
+                <div className="flex flex-col mb-3 gap-2">
+                  <label>Message</label>
+                  <textarea className="border rounded-lg py-2 px-3 min-h-[120px]  md:min-h-[200px]" />
+                </div>
+
+                <button className="text-black px-3 py-2 border border-[#000] rounded-[24px] mt-[28px]">
+                  GET IN TOUCH
+                </button>
+              </div>
+            </form>
+
+            <p className="max-w-[90%] md:max-w-[35%]">
+              Fill out the form below with as many details as possible and I'll
+              get back to you asap. Stoked to hear from you!
+            </p>
           </div>
-          <div className="w-full">
-          <div className="flex flex-col mb-3 gap-2">
-              <label>Enter email address</label>
-              <input className="w-full border py-2 px-3 rounded-lg" />
-            </div>
-            <div className="flex flex-col mb-3 gap-2">
-              <label>Message</label>
-              <textarea className="border rounded-lg py-2 px-3 min-h-[200px]" />
-            </div>
-
-
-            <button className="text-black px-3 py-2 border border-[#000] rounded-[24px] mt-[28px]">GET IN TOUCH</button>
-          </div>
-        </form>
-
-        <p className="max-w-[70%] md:max-w-[35%]">Fill out the form below with as many details as possible and I'll get back to you asap. Stoked to hear from you!</p>
-        </div>
-      </m.div> : ""}
+        </m.div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };
