@@ -35,8 +35,8 @@ const Preloader1 = () => {
             <p className="tracking-wider">I am a Superconnector.</p>
             <p>I connect over good food and sweet red wine.</p>
             <m.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               transition={{ ease: "easeOut", duration: 1.7 }}
             >
               <button
@@ -44,7 +44,7 @@ const Preloader1 = () => {
                 className="animate-bounce mt-7 flex justify-center gap-2 items-center text-[18px] cursor-pointer font-extrabold mx-auto"
               >
                 {" "}
-                Click me to proceed <BsHeartArrow />
+                Ride with me in this Journey <BsHeartArrow />
               </button>
             </m.div>{" "}
           </m.div>{" "}
@@ -54,7 +54,7 @@ const Preloader1 = () => {
       )}
 
       <CountUp
-        className="absolute right-3 bottom-9 text-[36px] font-extrabold"
+        className="absolute right-3 bottom-10 text-[36px] font-extrabold"
         start={0}
         end={100}
         duration={5}
