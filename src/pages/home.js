@@ -3,6 +3,7 @@ import React, { useRef, useState } from "react";
 import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 import Marquee from "react-fast-marquee";
 import { motion as m } from "framer-motion";
+import Clock from "../component/clock"
 import { Form } from "react-router-dom";
 
 const Home = () => {
@@ -91,7 +92,7 @@ const Home = () => {
             </div>
 
             <div className="hidden md:block">
-              <p className="text-white">{currTime}-WAT</p>
+              <p className="text-white flex"><Clock/>-WAT</p>
             </div>
 
             <button className="px-3 py-2 z-20 rounded-xl border-white border text-[14px] text-white transition-all duration-700 bg-gradient-to-br to-white via-black from-[#111111] bg-size-200 hover:bg-right-bottom">
