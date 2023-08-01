@@ -13,7 +13,7 @@ const Preloader1 = () => {
     }, 4000);
   }
   return (
-    <div className="h-screen relative">
+    <div className="h-screen relative overflow-hidden">
       {open ? (
         <div className="text-center flex flex-col justify-center  w-full h-full">
           <m.div
