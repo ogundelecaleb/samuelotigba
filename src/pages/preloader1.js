@@ -7,17 +7,22 @@ import { BsHeartArrow } from "react-icons/bs";
 const Preloader1 = () => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+  if (open === true) {
+    setTimeout(() => {
+      navigate("/home")
+    }, 4000);
+  }
   return (
     <div className="h-[100vh] relative">
       {open ? (
         <div className="text-center flex flex-col justify-center  w-full h-full">
           <m.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
+            initial={{ y:-500, scale: 0 }}
+            animate={{ y:0 ,scale: 1 }}
             transition={{
-              type: "spring",
-              stiffness: 260,
-              damping: 20,duration: 1.3
+              // type: "spring",
+              // stiffness: 260,
+              damping: 20,duration: 1.8
             }}
             // initial={{ y: -500, opacity: 0, scale: 0.5 }}
             // animate={{
@@ -34,7 +39,7 @@ const Preloader1 = () => {
             <h2 className="text-xl font-extrabold ">Otigba.</h2>
             <p className="tracking-wider">I am a Superconnector.</p>
             <p>I connect over good food and sweet red wine.</p>
-            <m.div
+            {/* <m.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ ease: "easeOut", duration: 1.7 }}
@@ -46,7 +51,7 @@ const Preloader1 = () => {
                 {" "}
                 Ride with me in this Journey <BsHeartArrow />
               </button>
-            </m.div>{" "}
+            </m.div>{" "} */}
           </m.div>{" "}
         </div>
       ) : (
