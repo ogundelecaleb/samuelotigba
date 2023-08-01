@@ -95,7 +95,7 @@ const Home = () => {
               <p className="text-white flex"><Clock/>-WAT</p>
             </div>
 
-            <button className="px-3 py-2 z-20 rounded-xl border-white border text-[14px] text-white transition-all duration-700 bg-gradient-to-br to-white via-black from-[#111111] bg-size-200 hover:bg-right-bottom">
+            <button  onClick={()=>{scrollingBottom(); setContactBox(!contactbox)}} className="px-3 py-2 z-20 rounded-xl border-white border text-[14px] text-white transition-all duration-700 bg-gradient-to-br to-white via-black from-[#111111] bg-size-200 hover:bg-right-bottom">
               CONTACT ME
             </button>
           </div>
