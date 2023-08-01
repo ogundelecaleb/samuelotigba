@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CountUp from "react-countup";
 import { useNavigate } from "react-router-dom";
 import { motion as m } from "framer-motion";
-import { BsHeartArrow } from "react-icons/bs";
+// import { BsHeartArrow } from "react-icons/bs";
 
 const Preloader1 = () => {
   const navigate = useNavigate();
