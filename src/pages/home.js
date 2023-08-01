@@ -71,7 +71,7 @@ const Home = () => {
     <div className="relative">
       <m.div
         initial={{ x:-500, scale: 0, opacity: 0 }}
-        animate={{ x:1, scale: 1, opacity: 1 }}
+        animate={{ x:0, scale: 1, opacity: 1 }}
         transition={{
           type: "ease",
           duration: 1.3,
